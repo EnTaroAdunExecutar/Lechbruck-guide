@@ -29,62 +29,6 @@ Ein personalisierter, interaktiver Reiseführer für eine Woche im Allgäu mit F
 - **Accordion-Menüs** - für übersichtliche Darstellung
 - **Back-to-Top Button** - schneller zurück nach oben
 
-### 🗺️ Integrierte Google Maps
-- Übersichtskarte der Region
-- Alle wichtigen Orte auf einen Blick
-
-### 📋 Inhalte
-
-#### 🥾 Wanderungen & Natur (5 Routen)
-- Lechweg & Lechschleifen
-- Forggensee-Rundweg
-- Ammerschlucht
-- Tegelberg & Rohrkopf
-- Bannwaldsee & Schwanseepark
-
-#### 🏰 Kultur & Sehenswürdigkeiten (5 Highlights)
-- Schloss Neuschwanstein ⭐
-- Schloss Hohenschwangau
-- Flößermuseum Lechbruck
-- Wieskirche (UNESCO) ⭐
-- Museum der Bayerischen Könige
-
-#### 🎒 Aktivitäten & Abenteuer (6 Erlebnisse)
-- Floßfahrt auf dem Lech ⭐
-- Alpaka-Wanderung ⭐
-- Radtour um den Forggensee
-- SUP & Bootsverleih
-- Walderlebniszentrum Ziegelwies
-- Tegelberg Sommerrodelbahn
-
-#### 🍽️ Restaurants & Gastronomie (6 Lokale)
-- Gasthof zum Fischerwirt ⭐
-- Pizzeria La Piazza
-- Berggasthof Rohrkopfhütte
-- Café am See
-- Schlossbrauhaus Schwangau
-- Wirtshaus zum Schwanen
-
-#### 🎯 Geheimtipps & Insider (7 Tipps)
-- Lechfall bei Füssen ⭐
-- Alatsee - Der mystische "Blutsee"
-- Königliche Kristall-Therme
-- Wildpark Wildenrath (kostenlos!)
-- Sonnenaufgang auf der Pöllatbrücke
-- Schwansee-Umrundung
-- Bäckerei Höss
-
-#### 📋 Praktische Hinweise
-- Wetter im Mai
-- Anreise & Mobilität
-- Wichtige Apps & Tickets
-- Tipps für Kinder
-- Tipps für Hunde
-- Packliste
-
-#### 📅 7-Tages-Plan
-Kompletter Tagesablauf für die ganze Woche!
-
 ---
 
 ## 🛠️ Technologie
@@ -163,24 +107,6 @@ python -m http.server 8000
 
 ---
 
-## 🤝 Beitragen
-
-Hast du Verbesserungsvorschläge oder hast du tolle Orte entdeckt, die fehlen?
-
-1. Fork das Repository
-2. Erstelle einen Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit deine Änderungen (`git commit -m 'Add some AmazingFeature'`)
-4. Push zum Branch (`git push origin feature/AmazingFeature`)
-5. Öffne einen Pull Request
-
----
-
-## 📝 Lizenz
-
-Dieses Projekt steht unter der MIT License - siehe [LICENSE](LICENSE) für Details.
-
----
-
 ## 🙏 Danksagungen
 
 - **Recherchequellen:**
@@ -190,23 +116,6 @@ Dieses Projekt steht unter der MIT License - siehe [LICENSE](LICENSE) für Detai
   - [AlpenAlpakas](https://www.alpenalpakas.de)
   - [Wieskirche](https://www.wieskirche.de)
   - [Allgäu Tourismus](https://www.allgaeu.de)
-
-- **Erstellt mit:**
-  - [Claude Code](https://claude.ai/code) - AI-powered travel guide generator
-  - Custom travel-guide skill
-
----
-
-## 📞 Kontakt
-
-**Erstellt:** 18. Mai 2026  
-**GitHub:** [@EnTaroAdunExecutar](https://github.com/EnTaroAdunExecutar)
-
----
-
-## ⭐ Star History
-
-Wenn dir dieser Reiseführer gefällt, gib dem Projekt einen Stern! ⭐
 
 ---
 
