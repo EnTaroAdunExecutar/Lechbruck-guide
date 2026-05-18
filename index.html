@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personalisierter Reiseführer für Lechbruck am See - Eine Woche Allgäu mit Familie & Hund">
+    <meta property="og:url" content="https://entaroadunexecutar.github.io/Lechbruck-guide/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://entaroadunexecutar.github.io/Lechbruck-guide/preview.jpg">
+    <meta name="theme-color" content="#1e88e5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta property="og:title" content="Lechbruck am See Reiseführer">
+    <meta property="og:description" content="Wandern, Kultur & Abenteuer im Allgäu - 23.-30. Mai 2026">
+    <title>🏔️ Lechbruck am See Reiseführer - Mai 2026</title>
+    <style>
+        :root {
+            --allgaeu-blue: #1e88e5;
+            --allgaeu-green: #43a047;
+            --allgaeu-yellow: #fdd835;
+            --allgaeu-red: #e53935;
+            --bg-light: #f5f5f5;
+            --text-dark: #212121;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(to bottom, #e3f2fd 0%, #ffffff 300px);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--allgaeu-blue) 0%, #1565c0 100%);
+            color: white;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 1rem;
+        }
+
+        .trip-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .trip-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 140px;
+            z-index: 99;
+            border-bottom: 3px solid var(--allgaeu-blue);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            overflow-x: auto;
+        }
+
+        .nav-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            background: var(--bg-light);
+            color: var(--text-dark);
+            border-radius: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .nav-btn:hover, .nav-btn.active {
+            background: var(--allgaeu-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Filters */
+        .filters {
+            max-width: 1200px;
+            margin: 1.5rem auto;
+            padding: 0 1rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-btn {
+            padding: 0.4rem 1rem;
+            border: 2px solid var(--border-color);
+            background: white;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+
+        .filter-btn.active {
+            border-color: var(--allgaeu-green);
+            background: var(--allgaeu-green);
+            color: white;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--allgaeu-green);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Section */
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--allgaeu-blue);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            border-color: var(--allgaeu-blue);
+        }
+
+        .card-header {
+            background: var(--allgaeu-blue);
+            color: white;
+            padding: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card.highlight .card-header {
+            background: linear-gradient(135deg, var(--allgaeu-yellow) 0%, #f9a825 100%);
+            color: var(--text-dark);
+        }
+
+        .card-body {
+            padding: 1.25rem;
+        }
+
+        .card-description {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .card-details {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .detail-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .detail-icon {
+            flex-shrink: 0;
+            width: 20px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .tag.family {
+            background: #e1f5fe;
+            color: #01579b;
+        }
+
+        .tag.dog {
+            background: #fff3e0;
+            color: #e65100;
+        }
+
+        .tag.highlight {
+            background: #fff59d;
+            color: #f57f17;
+        }
+
+        .price {
+            color: var(--allgaeu-green);
+            font-weight: 600;
+        }
+
+        .link-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--allgaeu-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 1rem;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .link-btn:hover {
+            background: #1565c0;
+            transform: translateX(4px);
+        }
+
+        .link-btn::after {
+            content: ' →';
+        }
+
+        /* Accordion */
+        .accordion-item {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-light);
+            transition: all 0.3s;
+        }
+
+        .accordion-header:hover {
+            background: #eeeeee;
+        }
+
+        .accordion-icon {
+            transition: transform 0.3s;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 2000px;
+        }
+
+        .accordion-body {
+            padding: 1.5rem;
+        }
+
+        /* Map Container */
+        .map-container {
+            background: white;
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .map-embed {
+            width: 100%;
+            height: 450px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        /* Bookmark */
+        .bookmark-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .bookmark-btn:hover {
+            transform: scale(1.2);
+        }
+
+        .bookmark-btn.active {
+            color: var(--allgaeu-yellow);
+        }
+
+        /* Back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--allgaeu-blue);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: 98;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-4px);
+            background: #1565c0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        /* Print Styles */
+        @media print {
+            nav, .filters, .back-to-top, .bookmark-btn {
+                display: none;
+            }
+
+            .card {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                top: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>🏔️ Lechbruck am See & Umgebung</h1>
+            <div class="subtitle">Eine Woche im Allgäu mit Familie & Hund</div>
+            <div class="trip-info">
+                <div class="trip-info-item">📅 23. - 30. Mai 2026</div>
+                <div class="trip-info-item">👨‍👩‍👧‍👦 Familie mit 2 Kindern (8 + 11 Jahre)</div>
+                <div class="trip-info-item">🐕 Mit Hund</div>
+            </div>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <button class="nav-btn" onclick="scrollToSection('wandern')">🥾 Wandern</button>
+            <button class="nav-btn" onclick="scrollToSection('kultur')">🏰 Kultur</button>
+            <button class="nav-btn" onclick="scrollToSection('aktivitaeten')">🎒 Aktivitäten</button>
+            <button class="nav-btn" onclick="scrollToSection('restaurants')">🍽️ Restaurants</button>
+            <button class="nav-btn" onclick="scrollToSection('geheimtipps')">🎯 Geheimtipps</button>
+            <button class="nav-btn" onclick="scrollToSection('praktisch')">📋 Praktisches</button>
+            <button class="nav-btn" onclick="scrollToSection('tagesplan')">📅 Tagesplan</button>
+            <button class="nav-btn" onclick="scrollToSection('karte')">🗺️ Karte</button>
+        </div>
+    </nav>
+
+    <div class="filters">
+        <strong>Filter:</strong>
+        <button class="filter-btn" data-filter="highlight" onclick="toggleFilter('highlight')">⭐ Highlights</button>
+        <button class="filter-btn" data-filter="family" onclick="toggleFilter('family')">👨‍👩‍👧‍👦 Kinderfreundlich</button>
+        <button class="filter-btn" data-filter="dog" onclick="toggleFilter('dog')">🐾 Hundefreundlich</button>
+        <button class="filter-btn" onclick="resetFilters()">↺ Alle anzeigen</button>
+    </div>
+
+    <div class="container">
+        <!-- Karte -->
+        <section id="karte" class="section">
+            <h2 class="section-title">🗺️ Übersichtskarte</h2>
+            <div class="map-container">
+                <iframe class="map-embed"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43145.91!2d10.7!3d47.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479cf5e6b6b6b6b6%3A0x6b6b6b6b6b6b6b6b!2sLechbruck%20am%20See!5e0!3m2!1sde!2sde!4v1234567890"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+                <p style="margin-top: 1rem; text-align: center; color: #666;">
+                    📍 Lechbruck am See liegt zentral zwischen Füssen (15 km) und Schongau (20 km)
+                </p>
+            </div>
+        </section>
+
+        <!-- Wanderungen -->
+        <section id="wandern" class="section">
+            <h2 class="section-title">🥾 Wanderungen & Natur</h2>
+            <div class="cards-grid">
+                <div class="card highlight" data-tags="highlight,family,dog">
+                    <div class="card-header">
+                        ⭐ Lechweg & Lechschleifen
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Der Lechweg ist einer der schönsten Fernwanderwege Europas (125 km).
+                            Für Familien ideal sind die <strong>Lechschleifen</strong> – 8 kürzere Rundtouren entlang des türkisblauen Lechs.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📏</span>
+                                <span><strong>Länge:</strong> 2-4 Stunden je Schleife</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⛰️</span>
+                                <span><strong>Schwierigkeit:</strong> Leicht bis mittel</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">✨</span>
+                                <span><strong>Highlight:</strong> Türkisblaues Wasser, letzter Wildfluss der Alpen</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag highlight">⭐ Top-Empfehlung</span>
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                            <span class="tag dog">🐾 Hundefreundlich</span>
+                        </div>
+                        <a href="https://www.lechweg.com" target="_blank" class="link-btn">Mehr Infos</a>
+                    </div>
+                </div>
+
+                <div class="card" data-tags="family,dog">
+                    <div class="card-header">
+                        Forggensee-Rundweg
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Bayerns fünftgrößter See mit Rundweg (32 km gesamt – Teilstrecken möglich!).
+                            Fantastische Ausblicke auf die Königsschlösser.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📏</span>
+                                <span><strong>Teilstrecke Lechbruck-Roßhaupten:</strong> 8 km, ca. 2h</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⛰️</span>
+                                <span><strong>Schwierigkeit:</strong> Leicht, flach</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💡</span>
+                                <span><strong>Tipp:</strong> Perfekt zum Radfahren mit Kindern!</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                            <span class="tag dog">🐾 Hundefreundlich</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-tags="family,dog">
+                    <div class="card-header">
+                        Ammerschlucht bei Altenau
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Eine der schönsten Schluchten im Allgäu mit spektakulären Wasserfällen,
+                            Hängebrücken und Holzstegen – echtes Abenteuer für Kinder!
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📏</span>
+                                <span><strong>Länge:</strong> 6 km Rundweg, ca. 2,5h</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⛰️</span>
+                                <span><strong>Schwierigkeit:</strong> Mittel</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⚠️</span>
+                                <span><strong>Wichtig:</strong> Festes Schuhwerk! Kann rutschig sein.</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                            <span class="tag dog">🐾 Hundefreundlich</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-tags="family,dog">
+                    <div class="card-header">
+                        Tegelberg & Rohrkopf
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Gipfelerfolg mit grandiosen Aussichten auf Neuschwanstein!
+                            <strong>Familienfreundlich:</strong> Mit der Tegelbergbahn hoch, zur Rohrkopfhütte wandern.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📏</span>
+                                <span><strong>Wanderung ab Bergstation:</strong> 1,5h zur Hütte</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⛰️</span>
+                                <span><strong>Schwierigkeit:</strong> Leicht (mit Bahn), Mittel (zu Fuß)</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span class="price">Bergbahn: Erw. ~14 €, Kinder ~7 €, Hunde frei</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">✨</span>
+                                <span><strong>Highlight:</strong> Rohrkopfhütte mit Spielplatz & Kaiserschmarrn!</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                            <span class="tag dog">🐾 Hundefreundlich</span>
+                        </div>
+                        <a href="https://www.tegelbergbahn.de" target="_blank" class="link-btn">Zur Tegelbergbahn</a>
+                    </div>
+                </div>
+
+                <div class="card" data-tags="family,dog">
+                    <div class="card-header">
+                        Bannwaldsee & Schwanseepark
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Perfekter Spaziergang für einen entspannten Nachmittag.
+                            Idyllischer See zwischen Lechbruck und Schwangau mit Badestelle.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📏</span>
+                                <span><strong>Rundweg:</strong> 3 km, ca. 1h</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⛰️</span>
+                                <span><strong>Schwierigkeit:</strong> Leicht</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🏊</span>
+                                <span><strong>Extras:</strong> Badestelle, Spielplatz, Tretbootverleih</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🐾</span>
+                                <span><strong>Hunde:</strong> Dürfen ins Wasser!</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                            <span class="tag dog">🐾 Hundefreundlich</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kultur -->
+        <section id="kultur" class="section">
+            <h2 class="section-title">🏰 Kultur & Sehenswürdigkeiten</h2>
+            <div class="cards-grid">
+                <div class="card highlight" data-tags="highlight,family">
+                    <div class="card-header">
+                        ⭐ Schloss Neuschwanstein
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Das Märchenschloss von König Ludwig II. – Vorlage für das Disney-Schloss.
+                            Absolutes Muss!
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🕐</span>
+                                <span><strong>Öffnungszeiten:</strong> April-Okt tägl. 9:00-18:00</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span class="price">Erw. 15 €, Kinder unter 18 frei (Online-Gebühr 2,50 €)</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⚠️</span>
+                                <span><strong>WICHTIG:</strong> Tickets UNBEDINGT online vorbuchen!</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">👑</span>
+                                <span><strong>Kinderprogramm:</strong> "Prinzen & Prinzessinnen" (4-10 Jahre)</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🐕</span>
+                                <span>Hunde NICHT im Schloss (nur Gelände)</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📸</span>
+                                <span><strong>Geheimtipp:</strong> Marienbrücke – bester Fotospot (kostenlos!)</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag highlight">⭐ Top-Empfehlung</span>
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                        </div>
+                        <a href="https://www.hohenschwangau.de" target="_blank" class="link-btn">Tickets buchen</a>
+                    </div>
+                </div>
+
+                <div class="card" data-tags="family">
+                    <div class="card-header">
+                        Schloss Hohenschwangau
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Das "gelbe Schloss" – hier wuchs König Ludwig II. auf.
+                            Authentischer und weniger überlaufen als Neuschwanstein.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🕐</span>
+                                <span><strong>Öffnungszeiten:</strong> April-Okt tägl. 9:00-17:30</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span class="price">Preise wie Neuschwanstein | Kombi-Ticket günstiger!</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">✨</span>
+                                <span><strong>Besonderheit:</strong> Originale Einrichtung aus dem 19. Jh.</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                        </div>
+                        <a href="https://www.hohenschwangau.de" target="_blank" class="link-btn">Tickets buchen</a>
+                    </div>
+                </div>
+
+                <div class="card" data-tags="family">
+                    <div class="card-header">
+                        🚣 Flößermuseum Lechbruck
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Lechbruck war jahrhundertelang wichtiges Flößerdorf – Holz wurde
+                            auf dem Lech bis nach München transportiert.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🕐</span>
+                                <span><strong>Öffnungszeiten:</strong> Di, Do, Sa 14:00-17:00 (Mai-Okt)</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span class="price">~3 € Erwachsene, Kinder frei</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">✨</span>
+                                <span>Originalgetreue Flöße & interaktive Stationen für Kinder</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💡</span>
+                                <span><strong>Geheimtipp:</strong> Mit Lechspaziergang kombinieren!</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card highlight" data-tags="highlight,family,dog">
+                    <div class="card-header">
+                        ⛪ Wieskirche (UNESCO)
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Die "schönste Dorfkirche der Welt" – barockes Meisterwerk von 1745-1754.
+                            UNESCO Weltkulturerbe seit 1983.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🕐</span>
+                                <span><strong>Öffnungszeiten:</strong> Mai-August tägl. 8:00-20:00</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span class="price">Kostenloser Eintritt (Spende erwünscht)</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🎨</span>
+                                <span>Atemberaubende Deckenmalereien</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🐾</span>
+                                <span>Hunde angeleint erlaubt</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📍</span>
+                                <span>20 Min. von Lechbruck (Steingaden)</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag highlight">⭐ UNESCO</span>
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                            <span class="tag dog">🐾 Hundefreundlich</span>
+                        </div>
+                        <a href="https://www.wieskirche.de" target="_blank" class="link-btn">Mehr Infos</a>
+                    </div>
+                </div>
+
+                <div class="card" data-tags="family">
+                    <div class="card-header">
+                        Museum der Bayerischen Könige
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Modernes Museum direkt am Alpsee mit der Geschichte der Wittelsbacher-Dynastie.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🕐</span>
+                                <span><strong>Öffnungszeiten:</strong> April-Okt tägl. 9:00-19:00</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span class="price">Erw. 11 €, Kinder 6 €, Familienkarte 25 €</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">✨</span>
+                                <span>Audioguides in 10 Sprachen, interaktive Stationen</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aktivitäten -->
+        <section id="aktivitaeten" class="section">
+            <h2 class="section-title">🎒 Aktivitäten & Abenteuer</h2>
+            <div class="cards-grid">
+                <div class="card highlight" data-tags="highlight,family,dog">
+                    <div class="card-header">
+                        ⭐ Floßfahrt auf dem Lech
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Das absolute Highlight für Kinder! Auf einem traditionellen Holzfloß
+                            den wilden Lech hinunter – echtes Abenteuer!
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📏</span>
+                                <span><strong>Dauer:</strong> 2-3 Stunden</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span class="price">Erw. ca. 25-30 €, Kinder ca. 15-20 €</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🐾</span>
+                                <span><strong>Hunde:</strong> Willkommen auf den Flößen!</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⚠️</span>
+                                <span><strong>Wichtig:</strong> Sonnenschutz & Wechselkleidung – kann nass werden!</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📞</span>
+                                <span>Buchung: Tourist-Info +49 8862 987 830</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag highlight">⭐ Top-Erlebnis</span>
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                            <span class="tag dog">🐾 Hundefreundlich</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card highlight" data-tags="highlight,family">
+                    <div class="card-header">
+                        🦙 Alpaka-Wanderung
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Unvergessliches Erlebnis für die Mädchen! Geführte Wanderungen mit
+                            flauschigen Alpakas durch die Allgäuer Berglandschaft.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">⏱️</span>
+                                <span><strong>Schnupperstunde:</strong> 1h (ab 6 Jahre)</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⏱️</span>
+                                <span><strong>Große Wanderung:</strong> 2,5h durch die Berglandschaft</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🕐</span>
+                                <span><strong>Hofladen:</strong> Di & Fr 14:30-18:00, Sa 10:00-14:00</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⚠️</span>
+                                <span><strong>WICHTIG:</strong> Telefonisch vorbuchen!</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📞</span>
+                                <span>+49 8862 9116974</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🐕</span>
+                                <span>Hinweis: Hunde können meist nicht mit (Alpaka-Sicherheit)</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag highlight">⭐ Top-Erlebnis</span>
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                        </div>
+                        <a href="https://www.alpenalpakas.de" target="_blank" class="link-btn">Zur Website</a>
+                    </div>
+                </div>
+
+                <div class="card" data-tags="family,dog">
+                    <div class="card-header">
+                        🚴 Radtour um den Forggensee
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Flacher, gut ausgebauter Radweg (32 km) – perfekt für Familien!
+                            Traumblick auf Neuschwanstein vom Seeufer.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">📏</span>
+                                <span><strong>Länge:</strong> 32 km gesamt (Teilstrecken möglich)</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⏱️</span>
+                                <span><strong>Dauer:</strong> 3-4h mit Pausen</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">✨</span>
+                                <span>Badestellen & Spielplätze unterwegs</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💡</span>
+                                <span><strong>Geheimtipp:</strong> Teilstrecke fahren, mit Schiff zurück!</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🚲</span>
+                                <span>Fahrradverleih am Bootshafen Lechbruck</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                            <span class="tag dog">🐾 Hundefreundlich</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-tags="family">
+                    <div class="card-header">
+                        🛶 SUP & Bootsverleih
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Stand-Up-Paddling, Kanu, Tretboote und Ruderboote am Bootshafen Lechbruck.
+                            Der Lech ist hier ruhig – perfekt für Anfänger!
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span class="price">SUP ~15 €/h, Tretboot ~10 €/h, Kanu ~20 €/h</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">📍</span>
+                                <span>Bootshafen Lechbruck</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-tags="family,dog">
+                    <div class="card-header">
+                        🧗 Walderlebniszentrum Ziegelwies
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Naturerlebnispark an der österreichischen Grenze mit Baumkronenweg
+                            in 21 m Höhe und Lechfall-Aussichtsplattform.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🕐</span>
+                                <span><strong>Öffnungszeiten:</strong> Mai-Okt tägl. 10:00-17:00</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span class="price">Kostenloser Eintritt!</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">✨</span>
+                                <span>Baumkronenweg barrierefrei, Hängebrücke über Grenze D/AUT</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🐾</span>
+                                <span>Hunde angeleint erlaubt – auch auf dem Baumkronenweg!</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                            <span class="tag dog">🐾 Hundefreundlich</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-tags="family">
+                    <div class="card-header">
+                        ⛷️ Tegelberg Sommerrodelbahn
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            760 Meter Rodelspaß am Tegelberg – nicht nur im Winter!
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🕐</span>
+                                <span><strong>Öffnungszeiten:</strong> Mai-Okt tägl. 10:00-17:00</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span class="price">Erw. ~5 €/Fahrt, Kinder ~3 €, 10er-Karte günstiger</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">👶</span>
+                                <span><strong>Mindestalter:</strong> Ab 3 Jahre mit Erwachsenen, ab 8 Jahren alleine</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⚠️</span>
+                                <span>Hunde dürfen NICHT mit auf die Rodelbahn</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Restaurants -->
+        <section id="restaurants" class="section">
+            <h2 class="section-title">🍽️ Restaurants & Gastronomie</h2>
+            <div class="cards-grid">
+                <div class="card highlight" data-tags="highlight,family,dog">
+                    <div class="card-header">
+                        ⭐ Gasthof zum Fischerwirt
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Traditioneller Gasthof direkt am Lech mit schönem Biergarten und Seeblick.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🍴</span>
+                                <span><strong>Küche:</strong> Bayerisch-Allgäuerisch</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span class="price">Preisniveau: €€</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">✨</span>
+                                <span><strong>Spezialitäten:</strong> Forelle aus dem Lech, Kässpatzen, Schnitzel</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🕐</span>
+                                <span><strong>Öffnungszeiten:</strong> Di-So 11:30-21:00, Mo Ruhetag</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">👶</span>
+                                <span>Kindermenü & Spielplatz</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🐾</span>
+                                <span>Hunde im Biergarten willkommen</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag highlight">⭐ Top-Empfehlung</span>
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                            <span class="tag dog">🐾 Hundefreundlich</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-tags="family">
+                    <div class="card-header">
+                        🍕 Pizzeria La Piazza
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Familienfreundliche Pizzeria – perfekt, wenn die Kinder mal keine Lust
+                            auf bayerische Küche haben.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🍴</span>
+                                <span><strong>Küche:</strong> Italienisch</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span class="price">Preisniveau: € - €€</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">✨</span>
+                                <span>Pizza, Pasta, Salate – große Kinderportionen</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🕐</span>
+                                <span><strong>Öffnungszeiten:</strong> Tägl. 11:30-14:00 & 17:30-22:00</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-tags="family,dog">
+                    <div class="card-header">
+                        🏔️ Berggasthof Rohrkopfhütte
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Nach der Tegelberg-Wanderung ein Muss! Urige Hütte auf 1.280 m
+                            mit Traumaussicht auf die Allgäuer Alpen.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🍴</span>
+                                <span><strong>Küche:</strong> Bayerisch</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span class="price">Preisniveau: €€</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">✨</span>
+                                <span><strong>Spezialität:</strong> Legendärer Kaiserschmarrn!</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🕐</span>
+                                <span><strong>Öffnungszeiten:</strong> Mai-Okt tägl. 9:00-18:00 (wetterabhängig)</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">👶</span>
+                                <span>Spielplatz draußen</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                            <span class="tag dog">🐾 Hundefreundlich</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-tags="family,dog">
+                    <div class="card-header">
+                        🥨 Café am See
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Gemütliches Café direkt am Forggensee – perfekt für Kaffee & Kuchen
+                            nach einer Radtour.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🍴</span>
+                                <span><strong>Angebot:</strong> Café & Kuchen</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span class="price">Preisniveau: € - €€</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">✨</span>
+                                <span>Hausgemachte Kuchen, Eis, Seeblick-Terrasse</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🕐</span>
+                                <span><strong>Öffnungszeiten:</strong> Tägl. 10:00-18:00 (Mai-Okt)</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">👶</span>
+                                <span>Spielecke für Kinder</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                            <span class="tag dog">🐾 Hundefreundlich</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-tags="family,dog">
+                    <div class="card-header">
+                        🍺 Schlossbrauhaus Schwangau
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Traditionsbrauerei mit Restaurant und Biergarten – nur 5 Min.
+                            von den Königsschlössern!
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🍴</span>
+                                <span><strong>Küche:</strong> Bayerisch</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span class="price">Preisniveau: €€</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">✨</span>
+                                <span><strong>Spezialitäten:</strong> Eigenes Bier, Schweinshaxe, Obazda</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🕐</span>
+                                <span><strong>Öffnungszeiten:</strong> Tägl. 11:00-22:00</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">👶</span>
+                                <span>Großer Biergarten mit Spielplatz</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🍺</span>
+                                <span>Brauereiführungen möglich</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                            <span class="tag dog">🐾 Hundefreundlich</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-tags="family">
+                    <div class="card-header">
+                        🥗 Wirtshaus zum Schwanen
+                        <button class="bookmark-btn" onclick="toggleBookmark(this)">☆</button>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Gehobene bayerische Küche in historischem Wirtshaus in Füssens Altstadt.
+                        </p>
+                        <div class="card-details">
+                            <div class="detail-row">
+                                <span class="detail-icon">🍴</span>
+                                <span><strong>Küche:</strong> Bayerisch-modern</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">💰</span>
+                                <span class="price">Preisniveau: €€ - €€€</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">✨</span>
+                                <span>Allgäuer Rind, saisonale Gerichte, vegetarische Optionen</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">🕐</span>
+                                <span><strong>Öffnungszeiten:</strong> Mi-So 17:00-21:30, Mo-Di Ruhetag</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-icon">⚠️</span>
+                                <span><strong>Wichtig:</strong> Reservierung empfohlen!</span>
+                            </div>
+                        </div>
+                        <div class="tags">
+                            <span class="tag family">👨‍👩‍👧‍👦 Kinderfreundlich</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Geheimtipps -->
+        <section id="geheimtipps" class="section">
+            <h2 class="section-title">🎯 Geheimtipps & Insider</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>⭐ <strong>Lechfall bei Füssen</strong> – Spektakulärer Wasserfall (kostenlos!)</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Einer der spektakulärsten Wasserfälle Bayerns – und kaum jemand kennt ihn! Der Lech stürzt hier 12 Meter in eine enge Schlucht.</p>
+                            <ul>
+                                <li><strong>Dauer:</strong> 15 Min. vom Parkplatz</li>
+                                <li><strong>Highlight:</strong> Maxsteg (historische Brücke) & Aussichtsplattform</li>
+                                <li><strong>Geheimtipp:</strong> Früh morgens (7-8 Uhr) seid ihr fast alleine!</li>
+                                <li>👨‍👩‍👧‍👦 Kinderfreundlich | 🐾 Hundefreundlich</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>🌊 <strong>Alatsee – Der mystische "Blutsee"</strong></span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Ein geheimnisvoller Bergsee mit dunklem, fast schwarzem Wasser. Im Sommer färbt sich das Wasser durch Purpurbakterien rötlich!</p>
+                            <ul>
+                                <li><strong>Wanderung:</strong> 5 km, ca. 1,5h</li>
+                                <li><strong>Sage:</strong> Versunkener Schatz im See (perfekt für Kinder-Fantasie!)</li>
+                                <li><strong>Badestelle:</strong> Für Mutige!</li>
+                                <li>👨‍👩‍👧‍👦 Kinderfreundlich | 🐾 Hundefreundlich</li>
+                                <li>📍 Parkplatz Alatsee, Füssen-Weißensee (20 Min. von Lechbruck)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>🧖 <strong>Königliche Kristall-Therme</strong> – Wellness mit Schlossblick</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Wellness und Badespaß mit Blick auf Neuschwanstein! Diese Therme ist noch relativ unbekannt.</p>
+                            <ul>
+                                <li><strong>Öffnungszeiten:</strong> Tägl. 9:00-22:00</li>
+                                <li><strong>Preise:</strong> Erw. 18 € (2h), Kinder 4-15 Jahre 10 €</li>
+                                <li><strong>Highlights:</strong> Panoramasauna mit Schlossblick, Familienrutschen, Solebecken</li>
+                                <li><strong>Geheimtipp:</strong> Abends ab 19 Uhr deutlich leerer!</li>
+                                <li>👨‍👩‍👧‍👦 Kinderfreundlich</li>
+                                <li>🌐 <a href="https://www.kristalltherme-schwangau.de" target="_blank">kristalltherme-schwangau.de</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>🦌 <strong>Wildpark Wildenrath</strong> – Kostenloser Tierpark</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Kleiner, kostenloser Wildpark mit Hirschen, Rehen und Ziegen – perfekt für einen kurzen Abstecher!</p>
+                            <ul>
+                                <li><strong>Eintritt:</strong> Kostenlos!</li>
+                                <li><strong>Highlights:</strong> Tiere füttern erlaubt (Futter vor Ort kaufen), Spielplatz</li>
+                                <li><strong>Tipp:</strong> Mit Schwansee-Wanderung kombinieren!</li>
+                                <li>👨‍👩‍👧‍👦 Kinderfreundlich | 🐾 Hunde angeleint erlaubt</li>
+                                <li>📍 Füssener Straße, Schwangau (10 Min. von Lechbruck)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>🌅 <strong>Sonnenaufgang auf der Pöllatbrücke</strong></span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Die Pöllatbrücke (unterhalb der Marienbrücke) ist um 6 Uhr morgens menschenleer – und der Sonnenaufgang über Neuschwanstein ist magisch!</p>
+                            <ul>
+                                <li><strong>Anfahrt:</strong> Parkplatz P4 Hohenschwangau, 20 Min. Fußweg</li>
+                                <li><strong>Geheimtipp:</strong> Thermoskanne mit Kakao für die Kinder mitnehmen!</li>
+                                <li>👨‍👩‍👧‍👦 Kinderfreundlich | 🐾 Hundefreundlich</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>🛶 <strong>Schwansee-Umrundung</strong> – Idylle ohne Touristen</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Ein idyllischer kleiner See zwischen Hohenschwangau und Füssen – kaum Touristen, viel Natur.</p>
+                            <ul>
+                                <li><strong>Rundweg:</strong> 2,5 km, ca. 45 Min.</li>
+                                <li><strong>Highlights:</strong> Bootssteg mit Traumblick auf Neuschwanstein, Badestelle</li>
+                                <li><strong>Geheimtipp:</strong> Perfekt für einen entspannten Nachmittag!</li>
+                                <li>👨‍👩‍👧‍👦 Kinderfreundlich | 🐾 Hundefreundlich</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>🍰 <strong>Bäckerei Höss</strong> – Beste Brezen im Ort</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Die beste Bäckerei in Lechbruck! Frische Brezen, Kuchen und belegte Semmeln für euren Wanderproviant.</p>
+                            <ul>
+                                <li><strong>Öffnungszeiten:</strong> Mo-Sa ab 6:00 Uhr</li>
+                                <li><strong>Geheimtipp:</strong> Probiert die "Leberkässemmel" – bayerisches Frühstück zum Mitnehmen!</li>
+                                <li>📍 Hauptstraße, Lechbruck Ortszentrum</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Praktisches -->
+        <section id="praktisch" class="section">
+            <h2 class="section-title">📋 Praktische Hinweise</h2>
+            <div class="accordion">
+                <div class="accordion-item active">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>🌤️ <strong>Wetter im Mai</strong></span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>Beste Reisezeit!</strong> Ende Mai ist perfekt fürs Allgäu:</p>
+                            <ul>
+                                <li>☀️ Temperaturen: 15-22°C tagsüber</li>
+                                <li>🌸 Frühsommer, blühende Wiesen</li>
+                                <li>✅ Noch nicht überlaufen (Hauptsaison ab Juni)</li>
+                                <li>🥾 Perfekt zum Wandern (nicht zu heiß)</li>
+                            </ul>
+                            <p><strong>Wichtig:</strong></p>
+                            <ul>
+                                <li>☔ Regenjacke einpacken (Allgäu-Wetter kann wechselhaft sein)</li>
+                                <li>🧢 Sonnenschutz (Höhensonne in den Bergen!)</li>
+                                <li>👟 Festes Schuhwerk für Wanderungen</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>🚗 <strong>Anreise & Mobilität</strong></span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>Mit dem Auto:</strong></p>
+                            <ul>
+                                <li>A7 bis Füssen, dann B16 nach Lechbruck (ca. 1,5h von München)</li>
+                                <li>Kostenlose Parkplätze in Lechbruck (Bootshafen, Ortszentrum)</li>
+                            </ul>
+                            <p><strong>Vor Ort:</strong></p>
+                            <ul>
+                                <li>🚗 Auto empfohlen für Flexibilität mit Kindern & Hund</li>
+                                <li>🎫 <strong>Königscard</strong> (mit Übernachtung oft kostenlos): Freie Fahrt mit Bussen!</li>
+                                <li>🚲 Fahrradverleih am Bootshafen Lechbruck</li>
+                            </ul>
+                            <p><strong>⚠️ WICHTIG:</strong> B16-Brücke bei Füssen bis August 2026 gesperrt → Umleitung einplanen!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>🎫 <strong>Wichtige Apps & Tickets</strong></span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>Apps:</strong></p>
+                            <ul>
+                                <li>📱 Komoot/Outdooractive – Wanderkarten offline speichern</li>
+                                <li>📱 DB Navigator – ÖPNV-Verbindungen</li>
+                                <li>📱 Allgäu-App – Veranstaltungen und Insider-Tipps</li>
+                            </ul>
+                            <p><strong>Tickets vorab buchen:</strong></p>
+                            <ul>
+                                <li>✅ <strong>Schloss Neuschwanstein:</strong> <a href="https://www.hohenschwangau.de" target="_blank">hohenschwangau.de</a> – UNBEDINGT vorbuchen!</li>
+                                <li>✅ <strong>Alpaka-Wanderung:</strong> Telefonisch bei AlpenAlpakas (+49 8862 9116974)</li>
+                                <li>✅ <strong>Floßfahrt:</strong> Am besten vorab anfragen (Tourist-Info +49 8862 987 830)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>👨‍👩‍👧‍👦 <strong>Mit Kindern: Tipps</strong></span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>Spielplätze:</strong></p>
+                            <ul>
+                                <li>Lechbruck Ortszentrum (am Bootshafen)</li>
+                                <li>Hopfen am See (mit Seeblick)</li>
+                                <li>Schwangau (bei der Kristall-Therme)</li>
+                            </ul>
+                            <p><strong>Wickelmöglichkeiten:</strong> Alle größeren Restaurants und Museen, Tourist-Infos</p>
+                            <p><strong>Kinderfreundliche Restaurants:</strong> Alle in diesem Guide haben Kindermenüs</p>
+                            <p><strong>Notfälle:</strong></p>
+                            <ul>
+                                <li>🏥 Krankenhaus Füssen: +49 8362 500-0</li>
+                                <li>👨‍⚕️ Kinderarzt Füssen: +49 8362 7777</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>🐾 <strong>Mit Hund: Tipps</strong></span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>Hundefreundliche Unterkünfte:</strong></p>
+                            <ul>
+                                <li>Viele Ferienwohnungen in Lechbruck erlauben Hunde</li>
+                                <li>Camping Brunnen (Forggensee) – sehr hundefreundlich!</li>
+                            </ul>
+                            <p><strong>Hundestrände:</strong></p>
+                            <ul>
+                                <li>🏖️ Forggensee: Mehrere Abschnitte erlauben Hunde im Wasser</li>
+                                <li>🏖️ Bannwaldsee: Hunde erlaubt</li>
+                                <li>🏖️ Lech: Überall erlaubt</li>
+                            </ul>
+                            <p><strong>Tierärzte:</strong></p>
+                            <ul>
+                                <li>🏥 Tierarztpraxis Dr. Schmid, Füssen: +49 8362 38383</li>
+                                <li>🏥 Tierärztliche Klinik Kaufbeuren (Notfall): +49 8341 8083</li>
+                            </ul>
+                            <p><strong>Wichtig:</strong></p>
+                            <ul>
+                                <li>⚠️ Leinenpflicht in Naturschutzgebieten (Lechweg-Abschnitte)</li>
+                                <li>❌ Hunde NICHT in Schloss Neuschwanstein/Hohenschwangau (nur Gelände)</li>
+                                <li>💩 Kotbeutel mitnehmen – wird in Bayern ernst genommen!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span>🎒 <strong>Empfohlene Packliste</strong></span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>Kleidung:</strong></p>
+                            <ul>
+                                <li>☑️ Wanderschuhe (für alle!)</li>
+                                <li>☑️ Regenjacke & Regenhose</li>
+                                <li>☑️ Sonnenhut & Sonnenbrille</li>
+                                <li>☑️ Fleecejacke (Berge können kühl sein)</li>
+                                <li>☑️ Badekleidung</li>
+                            </ul>
+                            <p><strong>Für die Kinder:</strong></p>
+                            <ul>
+                                <li>☑️ Eigene Rucksäcke (macht stolz!)</li>
+                                <li>☑️ Trinkflaschen</li>
+                                <li>☑️ Fernglas (für Tiere & Berge)</li>
+                                <li>☑️ Malbuch für Restaurant-Wartezeiten</li>
+                            </ul>
+                            <p><strong>Für den Hund:</strong></p>
+                            <ul>
+                                <li>☑️ Leine & Schleppleine</li>
+                                <li>☑️ Kotbeutel</li>
+                                <li>☑️ Reisenapf & Wassernapf</li>
+                                <li>☑️ Hundehandtuch (nach dem Baden!)</li>
+                                <li>☑️ EU-Heimtierausweis</li>
+                            </ul>
+                            <p><strong>Sonstiges:</strong></p>
+                            <ul>
+                                <li>☑️ Sonnencreme (LSF 50 für die Berge!)</li>
+                                <li>☑️ Zeckenzange</li>
+                                <li>☑️ Kleine Reiseapotheke</li>
+                                <li>☑️ Powerbank für Handys</li>
+                                <li>☑️ Offline-Karten auf dem Handy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tagesplan -->
+        <section id="tagesplan" class="section">
+            <h2 class="section-title">📅 Tagesplan-Vorschlag (7 Tage)</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span><strong>Tag 1 (Sa, 23.05.)</strong> – Ankunft & Lechbruck erkunden</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>☀️ <strong>Vormittag:</strong> Anreise, Unterkunft beziehen</li>
+                                <li>🚶 <strong>Nachmittag:</strong> Spaziergang am Lech, Flößermuseum</li>
+                                <li>🍽️ <strong>Abend:</strong> Gasthof zum Fischerwirt</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span><strong>Tag 2 (So, 24.05.)</strong> – Schlösser-Tag 🏰</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>👑 <strong>Früh:</strong> Schloss Neuschwanstein & Hohenschwangau (Tickets vorab!)</li>
+                                <li>🥪 <strong>Mittag:</strong> Picknick an der Marienbrücke</li>
+                                <li>🛶 <strong>Nachmittag:</strong> Schwansee-Umrundung</li>
+                                <li>🍺 <strong>Abend:</strong> Schlossbrauhaus Schwangau</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span><strong>Tag 3 (Mo, 25.05.)</strong> – Abenteuer auf dem Wasser 🚣</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>⭐ <strong>Vormittag:</strong> Floßfahrt auf dem Lech (2-3 Stunden)</li>
+                                <li>🛶 <strong>Nachmittag:</strong> SUP oder Tretboot am Bootshafen</li>
+                                <li>🍕 <strong>Abend:</strong> Pizzeria La Piazza</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span><strong>Tag 4 (Di, 26.05.)</strong> – Wandertag 🥾</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>🌲 <strong>Ganztags:</strong> Lechschleife-Wanderung (mit Picknick)</li>
+                                <li>🔄 <strong>Alternative:</strong> Ammerschlucht</li>
+                                <li>🥨 <strong>Abend:</strong> Café am See (Hopfen)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span><strong>Tag 5 (Mi, 27.05.)</strong> – Kultur & Entspannung ⛪</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>⛪ <strong>Vormittag:</strong> Wieskirche (UNESCO Welterbe)</li>
+                                <li>🏛️ <strong>Mittag:</strong> Museum der Bayerischen Könige</li>
+                                <li>🧖 <strong>Nachmittag:</strong> Kristall-Therme Schwangau</li>
+                                <li>🥗 <strong>Abend:</strong> Wirtshaus zum Schwanen</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span><strong>Tag 6 (Do, 28.05.)</strong> – Alpaka & Berge 🦙🏔️</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>🦙 <strong>Vormittag:</strong> Alpaka-Wanderung bei AlpenAlpakas</li>
+                                <li>🚠 <strong>Nachmittag:</strong> Tegelbergbahn + Rohrkopfhütte (Kaiserschmarrn!)</li>
+                                <li>⛷️ <strong>Optional:</strong> Sommerrodelbahn (falls noch Energie da ist 😊)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span><strong>Tag 7 (Fr, 29.05.)</strong> – Radtour & Geheimtipps 🚴</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>🚴 <strong>Vormittag:</strong> Radtour um den Forggensee (Teilstrecke)</li>
+                                <li>🥨 <strong>Mittag:</strong> Bäckerei Höss (Picknick mitnehmen)</li>
+                                <li>🌊 <strong>Nachmittag:</strong> Alatsee oder Lechfall</li>
+                                <li>🍽️ <strong>Abend:</strong> Abschiedsessen im Gasthof Fischerwirt</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <span><strong>Tag 8 (Sa, 30.05.)</strong> – Abreise 👋</span>
+                        <span class="accordion-icon">▼</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>☕ Gemütliches Frühstück</li>
+                                <li>🧗 <strong>Optional:</strong> Walderlebniszentrum Ziegelwies</li>
+                                <li>🚗 Abreise</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p><strong>🏔️ Viel Spaß im Allgäu!</strong></p>
+        <p>Habt eine wunderbare Woche in Lechbruck am See! 💙</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">
+            Erstellt am 18. Mai 2026 | Reisezeitraum: 23.-30. Mai 2026
+        </p>
+    </footer>
+
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+        // Scroll to section
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                const offset = 200; // Navbar + header height
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Back to top
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show/hide back to top button
+        window.addEventListener('scroll', () => {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Toggle bookmark
+        function toggleBookmark(btn) {
+            btn.classList.toggle('active');
+            btn.textContent = btn.classList.contains('active') ? '★' : '☆';
+        }
+
+        // Toggle accordion
+        function toggleAccordion(header) {
+            const item = header.parentElement;
+            const isActive = item.classList.contains('active');
+
+            // Close all other accordions in the same section
+            const accordionItems = item.parentElement.querySelectorAll('.accordion-item');
+            accordionItems.forEach(i => i.classList.remove('active'));
+
+            // Toggle current
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
+        // Filter functionality
+        let activeFilters = [];
+
+        function toggleFilter(filter) {
+            const btn = document.querySelector(`[data-filter="${filter}"]`);
+
+            if (activeFilters.includes(filter)) {
+                activeFilters = activeFilters.filter(f => f !== filter);
+                btn.classList.remove('active');
+            } else {
+                activeFilters.push(filter);
+                btn.classList.add('active');
+            }
+
+            applyFilters();
+        }
+
+        function resetFilters() {
+            activeFilters = [];
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const cards = document.querySelectorAll('.card');
+
+            if (activeFilters.length === 0) {
+                // Show all cards
+                cards.forEach(card => card.style.display = 'block');
+                return;
+            }
+
+            cards.forEach(card => {
+                const tags = card.dataset.tags ? card.dataset.tags.split(',') : [];
+                const hasAllFilters = activeFilters.every(filter => tags.includes(filter));
+
+                card.style.display = hasAllFilters ? 'block' : 'none';
+            });
+        }
+
+        // Active nav button on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section');
+            const navButtons = document.querySelectorAll('.nav-btn');
+
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 250)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navButtons.forEach(btn => {
+                btn.classList.remove('active');
+                const sectionId = btn.getAttribute('onclick').match(/'([^']+)'/)[1];
+                if (sectionId === current) {
+                    btn.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
