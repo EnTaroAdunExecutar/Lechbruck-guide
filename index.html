@@ -21,6 +21,40 @@
             --bg-light: #f5f5f5;
             --text-dark: #212121;
             --border-color: #e0e0e0;
+
+            /* Light mode colors */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f5f5f5;
+            --bg-gradient-start: #e3f2fd;
+            --bg-gradient-end: #ffffff;
+            --text-primary: #212121;
+            --text-secondary: #555555;
+            --card-bg: #ffffff;
+            --shadow: rgba(0,0,0,0.1);
+            --nav-bg: #ffffff;
+            --accordion-bg: #f9f9f9;
+        }
+
+        [data-theme="dark"] {
+            --allgaeu-blue: #42a5f5;
+            --allgaeu-green: #66bb6a;
+            --allgaeu-yellow: #ffee58;
+            --allgaeu-red: #ef5350;
+
+            /* Dark mode colors */
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2d2d2d;
+            --bg-gradient-start: #1a2332;
+            --bg-gradient-end: #1a1a1a;
+            --text-primary: #e0e0e0;
+            --text-secondary: #b0b0b0;
+            --card-bg: #2d2d2d;
+            --shadow: rgba(0,0,0,0.5);
+            --nav-bg: #2d2d2d;
+            --border-color: #404040;
+            --bg-light: #3a3a3a;
+            --text-dark: #e0e0e0;
+            --accordion-bg: #252525;
         }
 
         * {
@@ -32,8 +66,9 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: var(--text-dark);
-            background: linear-gradient(to bottom, #e3f2fd 0%, #ffffff 300px);
+            color: var(--text-primary);
+            background: linear-gradient(to bottom, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 300px);
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
         /* Header */
@@ -80,12 +115,13 @@
 
         /* Navigation */
         nav {
-            background: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: var(--nav-bg);
+            box-shadow: 0 2px 8px var(--shadow);
             position: sticky;
             top: 140px;
             z-index: 99;
             border-bottom: 3px solid var(--allgaeu-blue);
+            transition: background 0.3s ease;
         }
 
         .nav-container {
@@ -129,7 +165,8 @@
         .filter-btn {
             padding: 0.4rem 1rem;
             border: 2px solid var(--border-color);
-            background: white;
+            background: var(--card-bg);
+            color: var(--text-primary);
             border-radius: 20px;
             cursor: pointer;
             font-size: 0.85rem;
@@ -175,9 +212,9 @@
         }
 
         .card {
-            background: white;
+            background: var(--card-bg);
             border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px var(--shadow);
             overflow: hidden;
             transition: all 0.3s;
             border: 2px solid transparent;
@@ -185,7 +222,7 @@
 
         .card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 24px var(--shadow);
             border-color: var(--allgaeu-blue);
         }
 
@@ -211,7 +248,7 @@
 
         .card-description {
             margin-bottom: 1rem;
-            color: #555;
+            color: var(--text-secondary);
         }
 
         .card-details {
@@ -289,10 +326,10 @@
 
         /* Accordion */
         .accordion-item {
-            background: white;
+            background: var(--card-bg);
             border-radius: 8px;
             margin-bottom: 1rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px var(--shadow);
             overflow: hidden;
         }
 
@@ -307,7 +344,7 @@
         }
 
         .accordion-header:hover {
-            background: #eeeeee;
+            background: var(--accordion-bg);
         }
 
         .accordion-icon {
@@ -334,10 +371,10 @@
 
         /* Map Container */
         .map-container {
-            background: white;
+            background: var(--card-bg);
             border-radius: 12px;
             padding: 1rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px var(--shadow);
             margin-bottom: 2rem;
         }
 
@@ -393,6 +430,36 @@
             background: #1565c0;
         }
 
+        /* Dark Mode Toggle */
+        .theme-toggle {
+            position: fixed;
+            bottom: 6rem;
+            right: 2rem;
+            background: var(--card-bg);
+            color: var(--text-primary);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--border-color);
+            cursor: pointer;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 12px var(--shadow);
+            transition: all 0.3s;
+            z-index: 98;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover {
+            transform: translateY(-4px) rotate(20deg);
+            border-color: var(--allgaeu-yellow);
+        }
+
+        .theme-toggle .icon {
+            transition: transform 0.3s;
+        }
+
         /* Footer */
         footer {
             background: var(--text-dark);
@@ -404,7 +471,7 @@
 
         /* Print Styles */
         @media print {
-            nav, .filters, .back-to-top, .bookmark-btn {
+            nav, .filters, .back-to-top, .theme-toggle, .bookmark-btn {
                 display: none;
             }
 
@@ -2447,8 +2514,34 @@
     </footer>
 
     <button class="back-to-top" onclick="scrollToTop()">↑</button>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Dark/Light Mode umschalten">
+        <span class="icon" id="theme-icon">🌙</span>
+    </button>
 
     <script>
+        // Dark Mode Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            const themeIcon = document.getElementById('theme-icon');
+
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+
+            // Update icon
+            themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+        }
+
+        // Load saved theme on page load
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            const themeIcon = document.getElementById('theme-icon');
+
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+        })();
+
         // Scroll to section
         function scrollToSection(id) {
             const element = document.getElementById(id);
